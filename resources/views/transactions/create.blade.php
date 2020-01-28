@@ -47,6 +47,7 @@
                 @endforeach
                 </select>
            
+           
             </div>
              </div>
                <div class="col-xs-12 col-sm-12 col-md-12">
@@ -95,23 +96,29 @@
  <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Jumlah Kamar </strong>
-                <input type="text" name="jumlah_kamar" id="jumlah_kamar"class="form-control" placeholder=" Masukan jumlah kamar "  >
+                <input type="number" name="jumlah_kamar" id="jumlah_kamar"class="form-control" placeholder=" Masukan jumlah kamar "  >
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Lama Inap </strong>
-                <input type="text" name="lama_inap"  id="lama_inap" class="form-control" placeholder=" Masukan Lama Inap" onkeyup="sum();"/ >
+                <!-- ini teh bukaan php
+                
+$start_date = new DateTime("tanggal_cekin");
+$end_date = new DateTime("tanggal_cekout");
+$interval = $start_date->diff($end_date);
 
-               
+ini teh bukaan php{{"$interval->days hari ";}}  ?> 
+?> -->
+                <input type="number" name="lama_inap" id="lama_inap" class="form-control" placeholder=" Masukan Lama Inap" onkeyup="sum();"/ >
             </div>
         </div>
 
      <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Total </strong>
-                <input type="text" name="total" id="total" class="form-control" readonly="readonly">
+                <input type="number" name="total" id="total" class="form-control" readonly="readonly">
 
                
             </div>
@@ -120,14 +127,14 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Bayar </strong>
-                <input type="text" name="bayar" class="form-control" id="bayar" placeholder=" Masukan Bayar " onkeyup="suma();"/>
+                <input type="number" name="bayar" class="form-control" id="bayar" placeholder=" Masukan Bayar " onkeyup="suma();"/>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Kembalian </strong>
-                <input type="text" name="kembalian" class="form-control" id="kembalian" readonly="readonly">
+                <input type="number" name="kembalian" class="form-control" id="kembalian" readonly="readonly">
             </div>
         </div>
       
@@ -140,6 +147,7 @@
     </div>
    
 </form>
+
 
 
 <script type="text/javascript">

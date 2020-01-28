@@ -65,11 +65,23 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
             <strong>KTP</strong>
+            <img width="300" src="{{ url('/images/'.$guest->image) }}" ></td>
+            
                 <input type="file" name="image" class="form-control-file">
             </div>
         </div>
       
-        
+        <?php
+
+          if(isset($_SESSION['username'])){
+            echo '<li><a href="account.php">My Account</a></li>';
+            echo '<li><a href="logout.php">Log Out</a></li>';
+          }
+          else{
+            echo '<li><a href="login.php">Log In</a></li>';
+            echo '<li><a href="register.php">Register</a></li>';
+          }
+          ?>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
